@@ -17,6 +17,7 @@
 		CF723C722905B6EF00FA8CBE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF723C712905B6EF00FA8CBE /* SearchViewController.swift */; };
 		CF723C742905B71900FA8CBE /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF723C732905B71900FA8CBE /* DownloadsViewController.swift */; };
 		CF723C7B2905C2E000FA8CBE /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF723C7A2905C2E000FA8CBE /* CollectionViewTableViewCell.swift */; };
+		CF8F09A42905D4CE00EB782E /* ZeldaHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F09A32905D4CE00EB782E /* ZeldaHeaderUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CF723C712905B6EF00FA8CBE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CF723C732905B71900FA8CBE /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		CF723C7A2905C2E000FA8CBE /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		CF8F09A32905D4CE00EB782E /* ZeldaHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeldaHeaderUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CF723C7A2905C2E000FA8CBE /* CollectionViewTableViewCell.swift */,
+				CF8F09A32905D4CE00EB782E /* ZeldaHeaderUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				CF723C722905B6EF00FA8CBE /* SearchViewController.swift in Sources */,
 				CF723C5D2905B05600FA8CBE /* MainTabBarViewController.swift in Sources */,
 				CF723C7B2905C2E000FA8CBE /* CollectionViewTableViewCell.swift in Sources */,
+				CF8F09A42905D4CE00EB782E /* ZeldaHeaderUIView.swift in Sources */,
 				CF723C742905B71900FA8CBE /* DownloadsViewController.swift in Sources */,
 				CF723C592905B05600FA8CBE /* AppDelegate.swift in Sources */,
 				CF723C5B2905B05600FA8CBE /* SceneDelegate.swift in Sources */,

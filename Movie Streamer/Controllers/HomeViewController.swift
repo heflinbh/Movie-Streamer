@@ -23,6 +23,29 @@ class HomeViewController: UIViewController {
         
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
+        
+        configureNavbar()
+        
+        let headerView = ZeldaHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 320))
+        homeFeedTable.tableHeaderView = headerView
+    }
+    
+    private func configureNavbar() {
+        var imageTriforce = UIImage(named: "triforceLogo")
+        imageTriforce = imageTriforce?.withRenderingMode(.alwaysOriginal)
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: imageTriforce, style: .done, target: self, action: nil)
+        
+        var imageHylianSheild = UIImage(named: "hylianSheildLogo")
+        imageHylianSheild = imageHylianSheild?.withRenderingMode(.alwaysOriginal)
+        
+        var imageMasterSword = UIImage(named: "masterSwordLogo")
+        imageMasterSword = imageMasterSword?.withRenderingMode(.alwaysOriginal)
+        
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: imageHylianSheild, style: .done, target: self, action: nil),
+            UIBarButtonItem(image: imageMasterSword, style: .done, target: self, action: nil)
+        ]
     }
     
     override func viewDidLayoutSubviews() {
@@ -56,4 +79,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
+    
+    
+    
+    
+    
+    
 }
