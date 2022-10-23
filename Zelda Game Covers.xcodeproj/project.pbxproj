@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CF723C552905B05600FA8CBE /* Movie Streamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Streamer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF723C552905B05600FA8CBE /* Zelda Game Covers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zelda Game Covers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF723C582905B05600FA8CBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF723C5A2905B05600FA8CBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CF723C5C2905B05600FA8CBE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		CF723C4C2905B05600FA8CBE = {
 			isa = PBXGroup;
 			children = (
-				CF723C572905B05600FA8CBE /* Movie Streamer */,
+				CF723C572905B05600FA8CBE /* Zelda Game Covers */,
 				CF723C562905B05600FA8CBE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,12 +58,12 @@
 		CF723C562905B05600FA8CBE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF723C552905B05600FA8CBE /* Movie Streamer.app */,
+				CF723C552905B05600FA8CBE /* Zelda Game Covers.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CF723C572905B05600FA8CBE /* Movie Streamer */ = {
+		CF723C572905B05600FA8CBE /* Zelda Game Covers */ = {
 			isa = PBXGroup;
 			children = (
 				CF723C792905C2AE00FA8CBE /* Managers */,
@@ -79,7 +79,7 @@
 				CF723C632905B05900FA8CBE /* LaunchScreen.storyboard */,
 				CF723C662905B05900FA8CBE /* Info.plist */,
 			);
-			path = "Movie Streamer";
+			path = "Zelda Game Covers";
 			sourceTree = "<group>";
 		};
 		CF723C6C2905B63800FA8CBE /* Controllers */ = {
@@ -133,9 +133,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CF723C542905B05600FA8CBE /* Movie Streamer */ = {
+		CF723C542905B05600FA8CBE /* Zelda Game Covers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF723C692905B05900FA8CBE /* Build configuration list for PBXNativeTarget "Movie Streamer" */;
+			buildConfigurationList = CF723C692905B05900FA8CBE /* Build configuration list for PBXNativeTarget "Zelda Game Covers" */;
 			buildPhases = (
 				CF723C512905B05600FA8CBE /* Sources */,
 				CF723C522905B05600FA8CBE /* Frameworks */,
@@ -145,9 +145,9 @@
 			);
 			dependencies = (
 			);
-			name = "Movie Streamer";
+			name = "Zelda Game Covers";
 			productName = "Movie Streamer";
-			productReference = CF723C552905B05600FA8CBE /* Movie Streamer.app */;
+			productReference = CF723C552905B05600FA8CBE /* Zelda Game Covers.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -165,7 +165,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CF723C502905B05600FA8CBE /* Build configuration list for PBXProject "Movie Streamer" */;
+			buildConfigurationList = CF723C502905B05600FA8CBE /* Build configuration list for PBXProject "Zelda Game Covers" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -178,7 +178,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF723C542905B05600FA8CBE /* Movie Streamer */,
+				CF723C542905B05600FA8CBE /* Zelda Game Covers */,
 			);
 		};
 /* End PBXProject section */
@@ -397,7 +397,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CF723C502905B05600FA8CBE /* Build configuration list for PBXProject "Movie Streamer" */ = {
+		CF723C502905B05600FA8CBE /* Build configuration list for PBXProject "Zelda Game Covers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF723C672905B05900FA8CBE /* Debug */,
@@ -406,7 +406,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF723C692905B05900FA8CBE /* Build configuration list for PBXNativeTarget "Movie Streamer" */ = {
+		CF723C692905B05900FA8CBE /* Build configuration list for PBXNativeTarget "Zelda Game Covers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF723C6A2905B05900FA8CBE /* Debug */,

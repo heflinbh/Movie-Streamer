@@ -9,6 +9,18 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    
+    let sectionTitles: [String] = [
+        "Top Ranked",
+        "Oldies and Goodies",
+        "Newest Releases",
+        "Simple Beginnings",
+        "Fallen Timeline",
+        "Child Timeline",
+        "Adult Timeline"
+    ]
+    
+    
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
@@ -57,7 +69,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 20
+        return sectionTitles.count
     }
     
     
@@ -80,7 +92,23 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 40
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let defaultOffset = view.safeAreaInsets.top
+        let offset = scrollView.contentOffset.y + defaultOffset
+        
+        navigationController?.navigationBar.transform = .init(translationX: 0, y:min(0, -offset))
+    }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionTitles[section]
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else {return}
+        header.textLabel?.font = UIFont(name: "BodoniSvtyTwoITCTT-BookIta", size: 20)
+        header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
+        header.textLabel?.textColor = .white
+    }
     
     
     
