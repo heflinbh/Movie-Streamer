@@ -37,8 +37,11 @@ class APICaller {
         task.resume()
     }
     
-    func getDiscoverZeldaGames(completion: @escaping (Result<[Game], Error>) -> Void) {
-        guard let url = URL(string: "\(Constants.baseURL + Constants.gameAPI)") else {return}
+    func getSearchZeldaGames(with query: String, completion: @escaping (Result<[Game], Error>) -> Void) {
+        
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
+        
+        guard let url = URL(string: "\(Constants.baseURL + Constants.gameAPI + Constants.nameAPI + query)") else {return}
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
             guard let data = data, error == nil else {
                 return

@@ -43,11 +43,13 @@ class SearchViewController: UIViewController {
         navigationItem.searchController = searchController
         navigationController?.navigationBar.tintColor = .white
         
-        getDiscoverZeldaGames()
+        getListOfZeldaGames()
+        
+        searchController.searchResultsUpdater = self
     }
     
-    private func getDiscoverZeldaGames() {
-        APICaller.shared.getDiscoverZeldaGames() {[weak self] result in
+    private func getListOfZeldaGames() {
+        APICaller.shared.getListOfZeldaGames() {[weak self] result in
             switch result {
             case .success(let games):
                 self?.gameTitles = games
@@ -91,7 +93,32 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
-    
-    
-    
+
 }
+
+
+extension SearchViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        let searchBar = searchController.searchBar
+        
+        guard let query = searchBar.text,
+              !query.trimmingCharacters(in: .whitespaces).isEmpty,
+              query.trimmingCharacters(in: .whitespaces).count >= 1,
+              let resultsController = searchController.searchResultsController as? SearchResultsViewController else {return}
+        
+        APICaller.shared.getSearchZeldaGames(with: query) {result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let games):
+                    resultsController.gameTitles = games
+                    resultsController.searchResultsCollectionView.reloadData()
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+}
+
