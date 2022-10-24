@@ -19,7 +19,6 @@ enum Section: Int {
 
 class HomeViewController: UIViewController {
     
-    
     let sectionTitles: [String] = [
         "Top Ranked",
         "Oldies and Goodies",
@@ -29,7 +28,6 @@ class HomeViewController: UIViewController {
         "Child Timeline",
         "Adult Timeline"
     ]
-    
     
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)

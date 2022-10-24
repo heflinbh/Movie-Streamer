@@ -13,7 +13,6 @@
 		CF723C622905B05900FA8CBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF723C612905B05900FA8CBE /* Assets.xcassets */; };
 		CF723C652905B05900FA8CBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF723C632905B05900FA8CBE /* LaunchScreen.storyboard */; };
 		CF723C6E2905B68E00FA8CBE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF723C6D2905B68E00FA8CBE /* HomeViewController.swift */; };
-		CF723C702905B6CC00FA8CBE /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF723C6F2905B6CC00FA8CBE /* UpcomingViewController.swift */; };
 		CF723C722905B6EF00FA8CBE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF723C712905B6EF00FA8CBE /* SearchViewController.swift */; };
 		CF723C742905B71900FA8CBE /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF723C732905B71900FA8CBE /* DownloadsViewController.swift */; };
 		CF723C7B2905C2E000FA8CBE /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF723C7A2905C2E000FA8CBE /* CollectionViewTableViewCell.swift */; };
@@ -22,6 +21,9 @@
 		CF9B3B85290608DE0099E115 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B3B84290608DE0099E115 /* Game.swift */; };
 		CF9B3B87290611E20099E115 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B3B86290611E20099E115 /* Extensions.swift */; };
 		CF9B3B89290614D60099E115 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B3B88290614D60099E115 /* TitleCollectionViewCell.swift */; };
+		CF9B3B8B2906E3070099E115 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B3B8A2906E3070099E115 /* TitleTableViewCell.swift */; };
+		CF9B3B8D2906E61F0099E115 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B3B8C2906E61F0099E115 /* TitleViewModel.swift */; };
+		CF9B3B8F29072A2E0099E115 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B3B8E29072A2E0099E115 /* SearchResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +35,6 @@
 		CF723C642905B05900FA8CBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF723C662905B05900FA8CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF723C6D2905B68E00FA8CBE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		CF723C6F2905B6CC00FA8CBE /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		CF723C712905B6EF00FA8CBE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CF723C732905B71900FA8CBE /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		CF723C7A2905C2E000FA8CBE /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
@@ -42,6 +43,9 @@
 		CF9B3B84290608DE0099E115 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CF9B3B86290611E20099E115 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CF9B3B88290614D60099E115 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		CF9B3B8A2906E3070099E115 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		CF9B3B8C2906E61F0099E115 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
+		CF9B3B8E29072A2E0099E115 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,6 @@
 				CF723C6C2905B63800FA8CBE /* Controllers */,
 				CF723C582905B05600FA8CBE /* AppDelegate.swift */,
 				CF723C5A2905B05600FA8CBE /* SceneDelegate.swift */,
-				CF723C5C2905B05600FA8CBE /* MainTabBarViewController.swift */,
 				CF723C612905B05900FA8CBE /* Assets.xcassets */,
 				CF723C632905B05900FA8CBE /* LaunchScreen.storyboard */,
 				CF723C662905B05900FA8CBE /* Info.plist */,
@@ -93,10 +96,8 @@
 		CF723C6C2905B63800FA8CBE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CF723C6D2905B68E00FA8CBE /* HomeViewController.swift */,
-				CF723C6F2905B6CC00FA8CBE /* UpcomingViewController.swift */,
-				CF723C712905B6EF00FA8CBE /* SearchViewController.swift */,
-				CF723C732905B71900FA8CBE /* DownloadsViewController.swift */,
+				CF9B3B9129072AB10099E115 /* General */,
+				CF9B3B9029072A760099E115 /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,6 +108,7 @@
 				CF723C7A2905C2E000FA8CBE /* CollectionViewTableViewCell.swift */,
 				CF8F09A32905D4CE00EB782E /* ZeldaHeaderUIView.swift */,
 				CF9B3B88290614D60099E115 /* TitleCollectionViewCell.swift */,
+				CF9B3B8A2906E3070099E115 /* TitleTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +116,7 @@
 		CF723C762905C28B00FA8CBE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CF9B3B8C2906E61F0099E115 /* TitleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -140,6 +143,25 @@
 				CF9B3B822906022E0099E115 /* APICaller.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		CF9B3B9029072A760099E115 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CF723C5C2905B05600FA8CBE /* MainTabBarViewController.swift */,
+				CF723C732905B71900FA8CBE /* DownloadsViewController.swift */,
+				CF723C6D2905B68E00FA8CBE /* HomeViewController.swift */,
+				CF723C712905B6EF00FA8CBE /* SearchViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CF9B3B9129072AB10099E115 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				CF9B3B8E29072A2E0099E115 /* SearchResultsViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,7 +236,9 @@
 			files = (
 				CF723C722905B6EF00FA8CBE /* SearchViewController.swift in Sources */,
 				CF9B3B89290614D60099E115 /* TitleCollectionViewCell.swift in Sources */,
+				CF9B3B8B2906E3070099E115 /* TitleTableViewCell.swift in Sources */,
 				CF723C5D2905B05600FA8CBE /* MainTabBarViewController.swift in Sources */,
+				CF9B3B8F29072A2E0099E115 /* SearchResultsViewController.swift in Sources */,
 				CF723C7B2905C2E000FA8CBE /* CollectionViewTableViewCell.swift in Sources */,
 				CF9B3B832906022E0099E115 /* APICaller.swift in Sources */,
 				CF8F09A42905D4CE00EB782E /* ZeldaHeaderUIView.swift in Sources */,
@@ -222,8 +246,8 @@
 				CF9B3B85290608DE0099E115 /* Game.swift in Sources */,
 				CF9B3B87290611E20099E115 /* Extensions.swift in Sources */,
 				CF723C592905B05600FA8CBE /* AppDelegate.swift in Sources */,
+				CF9B3B8D2906E61F0099E115 /* TitleViewModel.swift in Sources */,
 				CF723C5B2905B05600FA8CBE /* SceneDelegate.swift in Sources */,
-				CF723C702905B6CC00FA8CBE /* UpcomingViewController.swift in Sources */,
 				CF723C6E2905B68E00FA8CBE /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,8 @@ import Foundation
 
 struct Constants {
     static let baseURL = "https://zelda.fanapis.com/api/"
+    static let gameAPI = "games/"
+    static let nameAPI = "?name="
 }
 
 enum APIError: Error {
@@ -18,16 +20,12 @@ enum APIError: Error {
 class APICaller {
     static let shared = APICaller()
     
-    
     func getListOfZeldaGames(completion: @escaping (Result<[Game], Error>) -> Void) {
-        
-        guard let url = URL(string: "\(Constants.baseURL)/games") else {return}
-        
+        guard let url = URL(string: "\(Constants.baseURL + Constants.gameAPI)") else {return}
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
             guard let data = data, error == nil else {
                 return
             }
-            
             do {
                 let results = try JSONDecoder().decode(ListOfGamesResponse.self, from: data)
                 completion(.success(results.data))
@@ -36,8 +34,23 @@ class APICaller {
                 completion(.failure(error))
             }
         }
-
         task.resume()
-        
+    }
+    
+    func getDiscoverZeldaGames(completion: @escaping (Result<[Game], Error>) -> Void) {
+        guard let url = URL(string: "\(Constants.baseURL + Constants.gameAPI)") else {return}
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            do {
+                let results = try JSONDecoder().decode(ListOfGamesResponse.self, from: data)
+                completion(.success(results.data))
+                
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        task.resume()
     }
 }
