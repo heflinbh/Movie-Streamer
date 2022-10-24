@@ -40,6 +40,8 @@ class HomeViewController: UIViewController {
         
         let headerView = ZeldaHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 320))
         homeFeedTable.tableHeaderView = headerView
+        
+        getListOfZeldaGames()
     }
     
     private func configureNavbar() {
@@ -64,6 +66,22 @@ class HomeViewController: UIViewController {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
     }
+    
+    
+    private func getListOfZeldaGames() {
+        APICaller.shared.getListOfZeldaGames { results in
+            switch results {
+            case .success(let games):
+                print(games)
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+    }
+    
+    
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -108,6 +126,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         header.textLabel?.font = UIFont(name: "BodoniSvtyTwoITCTT-BookIta", size: 20)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.textColor = .white
+        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLetter()
     }
     
     
