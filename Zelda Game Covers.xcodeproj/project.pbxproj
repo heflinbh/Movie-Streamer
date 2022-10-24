@@ -21,6 +21,7 @@
 		CF9B3B832906022E0099E115 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B3B822906022E0099E115 /* APICaller.swift */; };
 		CF9B3B85290608DE0099E115 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B3B84290608DE0099E115 /* Game.swift */; };
 		CF9B3B87290611E20099E115 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B3B86290611E20099E115 /* Extensions.swift */; };
+		CF9B3B89290614D60099E115 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B3B88290614D60099E115 /* TitleCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CF9B3B822906022E0099E115 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		CF9B3B84290608DE0099E115 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CF9B3B86290611E20099E115 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CF9B3B88290614D60099E115 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				CF723C7A2905C2E000FA8CBE /* CollectionViewTableViewCell.swift */,
 				CF8F09A32905D4CE00EB782E /* ZeldaHeaderUIView.swift */,
+				CF9B3B88290614D60099E115 /* TitleCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF723C722905B6EF00FA8CBE /* SearchViewController.swift in Sources */,
+				CF9B3B89290614D60099E115 /* TitleCollectionViewCell.swift in Sources */,
 				CF723C5D2905B05600FA8CBE /* MainTabBarViewController.swift in Sources */,
 				CF723C7B2905C2E000FA8CBE /* CollectionViewTableViewCell.swift in Sources */,
 				CF9B3B832906022E0099E115 /* APICaller.swift in Sources */,

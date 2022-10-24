@@ -7,6 +7,16 @@
 
 import UIKit
 
+enum Section: Int {
+    case TopRanked = 0
+    case OldiesAndGoodies = 1
+    case NewestReleases = 2
+    case SimpleBeginnings = 3
+    case FallenTimeline = 4
+    case ChildTimeline = 5
+    case AdultTimeline = 6
+}
+
 class HomeViewController: UIViewController {
     
     
@@ -99,6 +109,75 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
             return UITableViewCell()
         }
+        
+        switch indexPath.section {
+        case Section.TopRanked.rawValue:
+            APICaller.shared.getListOfZeldaGames { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        case Section.OldiesAndGoodies.rawValue:
+            APICaller.shared.getListOfZeldaGames { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        case Section.NewestReleases.rawValue:
+            APICaller.shared.getListOfZeldaGames { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        case Section.SimpleBeginnings.rawValue:
+            APICaller.shared.getListOfZeldaGames { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        case Section.FallenTimeline.rawValue:
+            APICaller.shared.getListOfZeldaGames { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        case Section.ChildTimeline.rawValue:
+            APICaller.shared.getListOfZeldaGames { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        case Section.AdultTimeline.rawValue:
+            APICaller.shared.getListOfZeldaGames { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        default:
+            return UITableViewCell()
+        }
+        
         return cell
     }
     
