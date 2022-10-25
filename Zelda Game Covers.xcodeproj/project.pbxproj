@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF4DFC8829081EEE00E23220 /* YouTubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DFC8729081EEE00E23220 /* YouTubeSearchResponse.swift */; };
+		CF4DFC8A2908232200E23220 /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DFC892908232200E23220 /* TitlePreviewViewController.swift */; };
+		CF4DFC8C2908268D00E23220 /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DFC8B2908268D00E23220 /* TitlePreviewViewModel.swift */; };
 		CF723C592905B05600FA8CBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF723C582905B05600FA8CBE /* AppDelegate.swift */; };
 		CF723C5B2905B05600FA8CBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF723C5A2905B05600FA8CBE /* SceneDelegate.swift */; };
 		CF723C5D2905B05600FA8CBE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF723C5C2905B05600FA8CBE /* MainTabBarViewController.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF4DFC8729081EEE00E23220 /* YouTubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeSearchResponse.swift; sourceTree = "<group>"; };
+		CF4DFC892908232200E23220 /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
+		CF4DFC8B2908268D00E23220 /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
 		CF723C552905B05600FA8CBE /* Zelda Game Covers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zelda Game Covers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF723C582905B05600FA8CBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF723C5A2905B05600FA8CBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				CF9B3B8C2906E61F0099E115 /* TitleViewModel.swift */,
+				CF4DFC8B2908268D00E23220 /* TitlePreviewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 		CF723C772905C29200FA8CBE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CF4DFC8729081EEE00E23220 /* YouTubeSearchResponse.swift */,
 				CF9B3B84290608DE0099E115 /* Game.swift */,
 			);
 			path = Models;
@@ -160,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				CF9B3B8E29072A2E0099E115 /* SearchResultsViewController.swift */,
+				CF4DFC892908232200E23220 /* TitlePreviewViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -234,14 +243,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4DFC8C2908268D00E23220 /* TitlePreviewViewModel.swift in Sources */,
 				CF723C722905B6EF00FA8CBE /* SearchViewController.swift in Sources */,
 				CF9B3B89290614D60099E115 /* TitleCollectionViewCell.swift in Sources */,
+				CF4DFC8A2908232200E23220 /* TitlePreviewViewController.swift in Sources */,
 				CF9B3B8B2906E3070099E115 /* TitleTableViewCell.swift in Sources */,
 				CF723C5D2905B05600FA8CBE /* MainTabBarViewController.swift in Sources */,
 				CF9B3B8F29072A2E0099E115 /* SearchResultsViewController.swift in Sources */,
 				CF723C7B2905C2E000FA8CBE /* CollectionViewTableViewCell.swift in Sources */,
 				CF9B3B832906022E0099E115 /* APICaller.swift in Sources */,
 				CF8F09A42905D4CE00EB782E /* ZeldaHeaderUIView.swift in Sources */,
+				CF4DFC8829081EEE00E23220 /* YouTubeSearchResponse.swift in Sources */,
 				CF723C742905B71900FA8CBE /* DownloadsViewController.swift in Sources */,
 				CF9B3B85290608DE0099E115 /* Game.swift in Sources */,
 				CF9B3B87290611E20099E115 /* Extensions.swift in Sources */,

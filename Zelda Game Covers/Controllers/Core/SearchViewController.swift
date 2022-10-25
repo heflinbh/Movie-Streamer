@@ -41,7 +41,7 @@ class SearchViewController: UIViewController {
         discoverTable.dataSource = self
         
         navigationItem.searchController = searchController
-        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.tintColor = .label
         
         getListOfZeldaGames()
         
@@ -93,7 +93,27 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let game = gameTitles[indexPath.row]
+        
+        guard let gameName = game.name else {return}
+        
+        APICaller.shared.getVideo(with: gameName) {[weak self] result in
+            switch result {
+            case .success(let videoElement):
+                DispatchQueue.main.async {
+                    let vc = TitlePreviewViewController()
+                    vc.configure(with: TitlePreviewViewModel(title: gameName, youTubeVideo: videoElement, titleOverview: game.description ?? ""))
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }
+    }
 }
 
 

@@ -48,8 +48,7 @@ class HomeViewController: UIViewController {
         
         let headerView = ZeldaHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 320))
         homeFeedTable.tableHeaderView = headerView
-        
-        getListOfZeldaGames()
+
     }
     
     private func configureNavbar() {
@@ -76,17 +75,17 @@ class HomeViewController: UIViewController {
     }
     
     
-    private func getListOfZeldaGames() {
-        APICaller.shared.getListOfZeldaGames { results in
-            switch results {
-            case .success(let games):
-                print(games)
-            case .failure(let error):
-                print(error)
-            }
-            
-        }
-    }
+//    private func getListOfZeldaGames() {
+//        APICaller.shared.getListOfZeldaGames { results in
+//            switch results {
+//            case .success(let games):
+//                print(games)
+//            case .failure(let error):
+//                print(error)
+//            }
+//
+//        }
+//    }
     
     
     
@@ -107,6 +106,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
             return UITableViewCell()
         }
+        
+        cell.delegate = self
         
         switch indexPath.section {
         case Section.TopRanked.rawValue:
@@ -202,11 +203,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let header = view as? UITableViewHeaderFooterView else {return}
         header.textLabel?.font = UIFont(name: "BodoniSvtyTwoITCTT-BookIta", size: 20)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
-        header.textLabel?.textColor = .white
+        header.textLabel?.textColor = .label
         header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLetter()
     }
-    
-    
-    
-    
+}
+
+extension HomeViewController: CollectionViewTableViewCellDelegate {
+    func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
+        
+        DispatchQueue.main.async { [weak self] in
+            let vc = TitlePreviewViewController()
+            vc.configure(with: viewModel)
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
